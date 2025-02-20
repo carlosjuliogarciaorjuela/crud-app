@@ -19,7 +19,8 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'email',
+        'document_number', //Se agrega el document_number para reflejar el cambio
+//        'email',
         'password',
     ];
 
