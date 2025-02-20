@@ -14,8 +14,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->bigInteger('document_number')->unique(); // se agrega nuevo campo para tomar el documento.
-//            $table->string('email')->unique();
+            $table->bigInteger('document_number')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
@@ -23,8 +22,7 @@ return new class extends Migration
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
-            $table->bigInteger('document_number')->primary(); // se agrega nuevo campo para tomar documento.
-//            $table->string('email')->primary();
+            $table->bigInteger('document_number')->primary();
             $table->string('token');
             $table->timestamp('created_at')->nullable();
         });
